@@ -1,0 +1,37 @@
+body {
+	  background:#2d3b36 url(he.jpg)no-repeat center center fixed;
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top:20px;
+    font-family:STCaiyun;
+}
+
+
+h1{
+	color: black;
+    font-size: 60px;
+    font-weight: bolder;
+}
+.sp{
+	color: black;
+    font-size: 70px;
+}
+
+::-webkit-input-placeholder {
+	  color: #fff;
+}
+
+:-moz-placeholder{ 
+    color: #fff; 
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {  
+	  color: #fff; 
+}
+

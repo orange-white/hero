@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>hero</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>HeroServlet</display-name>
+    <servlet-name>HeroServlet</servlet-name>
+    <servlet-class>com.rsy.servlet.HeroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HeroServlet</servlet-name>
+    <url-pattern>/HeroServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>character</filter-name>
+    <filter-class>com.rsy.filter.CharacterFilter</filter-class>
+    <init-param>
+    	<param-name>encoding</param-name>
+    	<param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>character</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>com.rsy.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/rsy/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>
